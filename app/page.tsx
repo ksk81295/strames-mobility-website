@@ -306,7 +306,13 @@ function InstagramIcon() {
     >
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
-      <circle cx="17.3" cy="6.8" r="1" fill="currentColor" stroke="none" />
+      <circle
+        cx="17.3"
+        cy="6.8"
+        r="1"
+        fill="currentColor"
+        stroke="none"
+      />
     </svg>
   );
 }
@@ -319,6 +325,34 @@ function FacebookIcon() {
       className="h-5 w-5"
     >
       <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.87.24-1.46 1.5-1.46h1.7V4a22.6 22.6 0 0 0-2.47-.13c-2.45 0-4.13 1.5-4.13 4.25V10H7.4v3h2.7v8h3.4Z" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-7 w-7"
+    >
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.5.0.17 5.33.17 11.88c0 2.1.55 4.15 1.6 5.96L.07 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.17-3.42-8.43ZM12.06 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.84 9.84 0 0 1-1.51-5.27c0-5.45 4.43-9.88 9.89-9.88a9.83 9.83 0 0 1 7 2.9 9.86 9.86 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
     </svg>
   );
 }
@@ -365,44 +399,77 @@ ${message}`;
 
   return (
     <main className="min-h-screen bg-[#071b3a] text-white">
-
       {/* =========================
           HEADER
       ========================= */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071b3a]/95 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-
-          <a href="#home" onClick={closeMenu} className="flex items-center">
+          <a
+            href="#home"
+            onClick={closeMenu}
+            className="flex items-center"
+          >
             <img
               src="/images/logo/strames-logo-tr.png"
               alt="Strames Mobility LLP"
-              className="h-12 w-auto object-contain"
+              className="h-10 w-auto object-contain sm:h-12"
             />
           </a>
 
-          <nav className="hidden items-center gap-10 md:flex">
-            <a href="#home" className="text-sm font-medium transition hover:text-yellow-400">
+          <nav className="hidden items-center gap-8 md:flex">
+            <a
+              href="#home"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               Home
             </a>
-            <a href="#about" className="text-sm font-medium transition hover:text-yellow-400">
+
+            <a
+              href="#about"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               About
             </a>
-            <a href="#services" className="text-sm font-medium transition hover:text-yellow-400">
+
+            <a
+              href="#services"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               Services
             </a>
-            <a href="#why-us" className="text-sm font-medium transition hover:text-yellow-400">
+
+            <a
+              href="#why-us"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               Why Us
             </a>
-            <a href="#leadership" className="text-sm font-medium transition hover:text-yellow-400">
+
+            <a
+              href="#leadership"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               Leadership
             </a>
-            <a href="#businesses" className="text-sm font-medium transition hover:text-yellow-400">
+
+            <a
+              href="#businesses"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               Who We Serve
             </a>
-            <a href="#fleet" className="text-sm font-medium transition hover:text-yellow-400">
+
+            <a
+              href="#fleet"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               Our Fleet
             </a>
-            <a href="#contact" className="text-sm font-medium transition hover:text-yellow-400">
+
+            <a
+              href="#contact"
+              className="text-sm font-medium transition hover:text-yellow-400"
+            >
               Contact
             </a>
           </nav>
@@ -451,7 +518,6 @@ ${message}`;
         {menuOpen && (
           <div className="border-t border-white/10 bg-[#06162f] md:hidden">
             <nav className="mx-auto flex max-w-7xl flex-col px-6 py-5">
-
               {[
                 ["#home", "Home"],
                 ["#about", "About"],
@@ -506,7 +572,6 @@ ${message}`;
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
           <Reveal>
             <div className="max-w-5xl">
-
               <div className="mb-8 flex items-center gap-4">
                 <div className="h-[2px] w-12 bg-yellow-400" />
 
@@ -515,7 +580,7 @@ ${message}`;
                 </p>
               </div>
 
-              <h1 className="max-w-5xl text-5xl font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
+              <h1 className="max-w-5xl text-4xl font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
                 <span className="block">Moving People.</span>
 
                 <span className="mt-2 block text-yellow-400">
@@ -575,7 +640,6 @@ ${message}`;
                   </p>
                 </div>
               </div>
-
             </div>
           </Reveal>
         </div>
@@ -589,9 +653,7 @@ ${message}`;
         className="border-b border-white/10 bg-[#06162f] py-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-
             <Reveal>
               <div>
                 <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
@@ -600,9 +662,7 @@ ${message}`;
 
                 <h2 className="mt-4 text-4xl font-extrabold sm:text-5xl">
                   Mobility built around
-                  <span className="text-yellow-400">
-                    {" "}people.
-                  </span>
+                  <span className="text-yellow-400"> people.</span>
                 </h2>
 
                 <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
@@ -650,7 +710,6 @@ ${message}`;
                 </Reveal>
               ))}
             </div>
-
           </div>
         </div>
       </section>
@@ -663,31 +722,25 @@ ${message}`;
         className="border-b border-white/10 bg-[#071b3a] py-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
           <Reveal>
             <div className="max-w-3xl">
-
               <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
                 OUR SERVICES
               </p>
 
               <h2 className="mt-4 text-4xl font-extrabold sm:text-5xl">
                 Transportation made{" "}
-                <span className="text-yellow-400">
-                  simple.
-                </span>
+                <span className="text-yellow-400">simple.</span>
               </h2>
 
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
                 Professional mobility solutions tailored to your business,
                 employee and travel requirements.
               </p>
-
             </div>
           </Reveal>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
             {services.map((service, index) => (
               <Reveal key={service.title} delay={index * 100}>
                 <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.07] via-white/[0.035] to-transparent p-8 transition-all duration-300 hover:-translate-y-2 hover:border-yellow-400/50 hover:shadow-2xl hover:shadow-black/20">
@@ -708,11 +761,9 @@ ${message}`;
                   <div className="mt-6 text-sm font-bold text-yellow-400 opacity-0 transition duration-300 group-hover:translate-x-1 group-hover:opacity-100">
                     Learn More →
                   </div>
-
                 </div>
               </Reveal>
             ))}
-
           </div>
         </div>
       </section>
@@ -725,12 +776,9 @@ ${message}`;
         className="border-b border-white/10 bg-[#06162f] py-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
           <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-
             <Reveal>
               <div className="lg:sticky lg:top-32">
-
                 <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
                   WHY STRAMES
                 </p>
@@ -744,8 +792,8 @@ ${message}`;
 
                 <p className="mt-6 max-w-lg text-lg leading-8 text-slate-400">
                   We focus on delivering professional transportation
-                  experiences that businesses, employees and travellers
-                  can rely on.
+                  experiences that businesses, employees and travellers can
+                  rely on.
                 </p>
 
                 <a
@@ -754,24 +802,19 @@ ${message}`;
                 >
                   Discuss Your Requirement →
                 </a>
-
               </div>
             </Reveal>
 
             <div className="divide-y divide-white/10 border-y border-white/10">
-
               {whyChooseUs.map((item, index) => (
                 <Reveal key={item.number} delay={index * 120}>
                   <div className="group grid gap-5 py-8 sm:grid-cols-[80px_1fr] sm:items-start">
-
                     <p className="text-sm font-bold tracking-widest text-yellow-400/70">
                       {item.number}
                     </p>
 
                     <div>
-
                       <div className="flex items-center gap-4">
-
                         <h3 className="text-2xl font-bold transition group-hover:text-yellow-400">
                           {item.title}
                         </h3>
@@ -779,26 +822,22 @@ ${message}`;
                         <span className="text-xl text-white/20 transition group-hover:translate-x-1 group-hover:text-yellow-400">
                           →
                         </span>
-
                       </div>
 
                       <p className="mt-3 max-w-2xl leading-7 text-slate-400">
                         {item.description}
                       </p>
-
                     </div>
                   </div>
                 </Reveal>
               ))}
-
             </div>
-
           </div>
         </div>
       </section>
 
       {/* =========================
-          OUR LEADERSHIP
+          LEADERSHIP
       ========================= */}
       <section
         id="leadership"
@@ -813,7 +852,9 @@ ${message}`;
 
               <h2 className="mt-4 text-4xl font-extrabold sm:text-5xl">
                 The people behind{" "}
-                <span className="text-yellow-400">Strames Mobility.</span>
+                <span className="text-yellow-400">
+                  Strames Mobility.
+                </span>
               </h2>
 
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
@@ -842,7 +883,9 @@ ${message}`;
                     </span>
                   </div>
 
-                  <h3 className="mt-7 text-2xl font-bold">{person.name}</h3>
+                  <h3 className="mt-7 text-2xl font-bold">
+                    {person.name}
+                  </h3>
 
                   <p className="mt-2 text-sm font-bold uppercase tracking-[0.12em] text-yellow-400">
                     {person.role}
@@ -853,18 +896,12 @@ ${message}`;
                   </p>
 
                   <a
-                    href={`tel:${person.phone.split(" / ")[0].replace(/ /g, "")}`}
+                    href={`tel:${person.phone
+                      .split(" / ")[0]
+                      .replace(/ /g, "")}`}
                     className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-yellow-400"
                   >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      className="h-4 w-4"
-                    >
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 5.18 2 2 0 0 1 4.11 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 10.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
-                    </svg>
+                    <PhoneIcon />
                     {person.phone}
                   </a>
                 </div>
@@ -890,13 +927,15 @@ ${message}`;
 
               <h2 className="mt-4 text-4xl font-extrabold sm:text-5xl">
                 Mobility solutions for
-                <span className="text-yellow-400"> {" "}real requirements.</span>
+                <span className="text-yellow-400">
+                  {" "}real requirements.
+                </span>
               </h2>
 
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-                From corporate transportation to everyday travel, Strames Mobility
-                is built to support people, teams and organisations with
-                dependable mobility solutions.
+                From corporate transportation to everyday travel, Strames
+                Mobility is built to support people, teams and organisations
+                with dependable mobility solutions.
               </p>
             </div>
           </Reveal>
@@ -909,12 +948,16 @@ ${message}`;
                     <span className="text-xs font-bold tracking-[0.2em] text-yellow-400">
                       {item.number}
                     </span>
+
                     <span className="text-xl text-white/20 transition group-hover:translate-x-1 group-hover:text-yellow-400">
                       ↗
                     </span>
                   </div>
 
-                  <h3 className="mt-8 text-xl font-bold">{item.title}</h3>
+                  <h3 className="mt-8 text-xl font-bold">
+                    {item.title}
+                  </h3>
+
                   <p className="mt-3 text-sm leading-7 text-slate-400">
                     {item.description}
                   </p>
@@ -926,11 +969,16 @@ ${message}`;
           <Reveal delay={200}>
             <div className="mt-8 flex flex-col gap-5 rounded-3xl border border-yellow-400/20 bg-yellow-400/[0.05] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-8">
               <div>
-                <p className="text-lg font-bold">Looking for a dependable mobility partner?</p>
+                <p className="text-lg font-bold">
+                  Looking for a dependable mobility partner?
+                </p>
+
                 <p className="mt-1 text-sm text-slate-400">
-                  Tell us what you need and we&apos;ll help plan the right transportation solution.
+                  Tell us what you need and we&apos;ll help plan the right
+                  transportation solution.
                 </p>
               </div>
+
               <a
                 href="#contact"
                 className="inline-flex shrink-0 items-center justify-center rounded-full bg-yellow-400 px-7 py-3.5 text-sm font-bold text-[#071b3a] transition hover:-translate-y-0.5 hover:bg-yellow-300"
@@ -950,10 +998,8 @@ ${message}`;
         className="border-b border-white/10 bg-[#071b3a] py-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
           <Reveal>
             <div className="max-w-3xl">
-
               <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
                 OUR FLEET
               </p>
@@ -970,19 +1016,14 @@ ${message}`;
                 employee transportation, airport transfers and comfortable
                 journeys.
               </p>
-
             </div>
           </Reveal>
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
             {fleet.map((vehicle, index) => (
               <Reveal key={vehicle.number} delay={index * 150}>
-
                 <div className="group h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition-all duration-300 hover:-translate-y-2 hover:border-yellow-400/50 hover:shadow-2xl hover:shadow-black/20">
-
                   <div className="relative flex h-64 items-center justify-center overflow-hidden bg-[#0b2449] px-4">
-
                     <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 via-transparent to-blue-500/10" />
 
                     <div className="absolute left-0 top-0 h-px w-0 bg-yellow-400 transition-all duration-500 group-hover:w-full" />
@@ -996,11 +1037,9 @@ ${message}`;
                     <span className="absolute right-5 top-5 z-20 text-sm font-bold tracking-widest text-white/20">
                       {vehicle.number}
                     </span>
-
                   </div>
 
                   <div className="p-7">
-
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400">
                       {vehicle.category}
                     </p>
@@ -1014,7 +1053,6 @@ ${message}`;
                     </p>
 
                     <div className="mt-6 flex flex-wrap gap-2">
-
                       {vehicle.features.map((feature) => (
                         <span
                           key={feature}
@@ -1023,7 +1061,6 @@ ${message}`;
                           {feature}
                         </span>
                       ))}
-
                     </div>
 
                     <a
@@ -1036,13 +1073,10 @@ ${message}`;
                         →
                       </span>
                     </a>
-
                   </div>
                 </div>
-
               </Reveal>
             ))}
-
           </div>
         </div>
       </section>
@@ -1061,12 +1095,14 @@ ${message}`;
                   <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
                     READY TO MOVE?
                   </p>
+
                   <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
                     Let&apos;s build the right mobility solution for you.
                   </h2>
+
                   <p className="mt-4 leading-7 text-slate-400">
-                    Corporate transport, employee mobility, rentals, airport transfers or travel —
-                    share your requirement with our team.
+                    Corporate transport, employee mobility, rentals, airport
+                    transfers or travel — share your requirement with our team.
                   </p>
                 </div>
 
@@ -1077,6 +1113,7 @@ ${message}`;
                   >
                     Book a Vehicle →
                   </a>
+
                   <a
                     href="https://wa.me/918551053573?text=Hello%20Strames%20Mobility%20LLP%2C%20I%20would%20like%20to%20discuss%20a%20transportation%20requirement."
                     target="_blank"
@@ -1100,10 +1137,8 @@ ${message}`;
         className="border-b border-white/10 bg-[#06162f] py-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
           <Reveal>
             <div className="max-w-3xl">
-
               <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
                 GET IN TOUCH
               </p>
@@ -1119,14 +1154,11 @@ ${message}`;
                 Tell us about your transportation requirement and our team
                 will get back to you with the right mobility solution.
               </p>
-
             </div>
           </Reveal>
 
           <div className="mt-14 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-
             <div className="space-y-5">
-
               <Reveal delay={60}>
                 <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]">
                   <div className="flex items-center justify-between gap-4 border-b border-white/10 px-7 py-5">
@@ -1134,12 +1166,14 @@ ${message}`;
                       <p className="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400">
                         FIND STRAMES
                       </p>
+
                       <p className="mt-1 font-semibold">
                         View us on Google Maps
                       </p>
                     </div>
+
                     <a
-                      href="https://www.google.com/maps/search/?api=1&query=Strames%20Mobility%20LLP"
+                      href="https://maps.app.goo.gl/9yJ8D5C4VNFnrVmG7?g_st=ic"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm font-bold text-yellow-400 transition hover:text-yellow-300"
@@ -1151,7 +1185,7 @@ ${message}`;
                   <div className="relative h-64 bg-[#0b2449]">
                     <iframe
                       title="Strames Mobility LLP on Google Maps"
-                      src="https://www.google.com/maps?q=Strames%20Mobility%20LLP&output=embed"
+                      src="https://www.google.com/maps?q=Precious%20Avenue%20Flat%20210%20Belavali%20Badlapur%20West%2C%20Badlapur%20E.D.%2C%20Thane%2C%20Maharashtra%20421503%2C%20India&output=embed"
                       className="h-full w-full border-0 opacity-90"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
@@ -1161,90 +1195,58 @@ ${message}`;
               </Reveal>
 
               <Reveal>
-                <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 transition hover:border-yellow-400/30">
+                <a
+                  href="mailto:info@stramesmobility.com"
+                  className="block rounded-3xl border border-white/10 bg-white/[0.04] p-7 transition hover:border-yellow-400/30"
+                >
+                  <p className="text-sm text-slate-500">
+                    Email
+                  </p>
 
-                  <div className="flex items-start gap-5">
-
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-yellow-400/10 text-yellow-400">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        className="h-6 w-6"
-                      >
-                        <path d="M4 5h16v14H4z" />
-                        <path d="m4 7 8 6 8-6" />
-                      </svg>
-                    </div>
-
-                    <div>
-
-                      <p className="text-sm text-slate-500">
-                        Email
-                      </p>
-
-                      <a
-                        href="mailto:info@stramesmobility.com"
-                        className="mt-1 block font-semibold transition hover:text-yellow-400"
-                      >
-                        info@stramesmobility.com
-                      </a>
-
-                    </div>
-
-                  </div>
-
-                </div>
+                  <p className="mt-1 font-semibold">
+                    info@stramesmobility.com
+                  </p>
+                </a>
               </Reveal>
 
-              <Reveal delay={120}>
+              <Reveal>
+                <a
+                  href="tel:+918551053573"
+                  className="block rounded-3xl border border-white/10 bg-white/[0.04] p-7 transition hover:border-yellow-400/30"
+                >
+                  <p className="text-sm text-slate-500">
+                    Call
+                  </p>
+
+                  <p className="mt-1 font-semibold">
+                    +91 85510 53573
+                  </p>
+                </a>
+              </Reveal>
+
+              <Reveal>
                 <a
                   href="https://wa.me/918551053573"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-3xl border border-yellow-400/20 bg-yellow-400/[0.06] p-7 transition hover:-translate-y-1 hover:border-yellow-400/50"
+                  className="block rounded-3xl border border-white/10 bg-white/[0.04] p-7 transition hover:border-yellow-400/30"
                 >
+                  <p className="text-sm text-yellow-400">
+                    WhatsApp
+                  </p>
 
-                  <div className="flex items-start gap-5">
+                  <p className="mt-1 font-semibold">
+                    Chat with our mobility team
+                  </p>
 
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-yellow-400/10 text-yellow-400">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        className="h-6 w-6"
-                      >
-                        <path d="M21 11.5a8.5 8.5 0 0 1-12.8 7.4L4 20l1.1-4.1A8.5 8.5 0 1 1 21 11.5z" />
-                        <path d="M8.5 9.5c.4 2 2 3.6 4 4" />
-                      </svg>
-                    </div>
-
-                    <div>
-
-                      <p className="text-sm text-yellow-400">
-                        WhatsApp
-                      </p>
-
-                      <p className="mt-1 font-semibold">
-                        Chat with our mobility team
-                      </p>
-
-                      <p className="mt-1 text-sm text-slate-400">
-                        +91 85510 53573
-                      </p>
-
-                    </div>
-
-                  </div>
-
+                  <p className="mt-1 text-sm text-slate-400">
+                    +91 85510 53573
+                  </p>
                 </a>
               </Reveal>
 
               <Reveal delay={240}>
                 <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
-
                   <p className="text-sm font-bold uppercase tracking-widest text-yellow-400">
                     Strames Mobility LLP
                   </p>
@@ -1253,22 +1255,17 @@ ${message}`;
                     Professional mobility and transportation solutions
                     designed for businesses, employees and travellers.
                   </p>
-
                 </div>
               </Reveal>
-
             </div>
 
             <Reveal>
               <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
-
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
-
                   <div className="grid gap-6 sm:grid-cols-2">
-
                     <div>
                       <label
                         htmlFor="name"
@@ -1304,11 +1301,9 @@ ${message}`;
                         className="w-full rounded-2xl border border-white/10 bg-[#071b3a] px-5 py-4 text-white outline-none placeholder:text-slate-600 transition focus:border-yellow-400/60"
                       />
                     </div>
-
                   </div>
 
                   <div className="grid gap-6 sm:grid-cols-2">
-
                     <div>
                       <label
                         htmlFor="email"
@@ -1343,11 +1338,9 @@ ${message}`;
                         className="w-full rounded-2xl border border-white/10 bg-[#071b3a] px-5 py-4 text-white outline-none placeholder:text-slate-600 transition focus:border-yellow-400/60"
                       />
                     </div>
-
                   </div>
 
                   <div>
-
                     <label
                       htmlFor="service"
                       className="mb-2 block text-sm font-semibold text-slate-300"
@@ -1359,47 +1352,24 @@ ${message}`;
                       id="service"
                       name="service"
                       defaultValue=""
-                      className="w-full rounded-2xl border border-white/10 bg-[#071b3a] px-5 py-4 text-slate-300 outline-none transition focus:border-yellow-400/60"
+                      className="w-full rounded-2xl border border-white/10 bg-[#071b3a] px-5 py-4 text-white outline-none transition focus:border-yellow-400/60"
                     >
-
                       <option value="" disabled>
                         Select a service
                       </option>
 
-                      <option value="Corporate Travel">
-                        Corporate Travel
-                      </option>
-
-                      <option value="Employee Transportation">
-                        Employee Transportation
-                      </option>
-
-                      <option value="Fleet Management">
-                        Fleet Management
-                      </option>
-
-                      <option value="Car Rentals">
-                        Car Rentals
-                      </option>
-
-                      <option value="Airport Transfers">
-                        Airport Transfers
-                      </option>
-
-                      <option value="Tours & Transfers">
-                        Tours & Transfers
-                      </option>
-
-                      <option value="Other">
-                        Other Requirement
-                      </option>
-
+                      {services.map((service) => (
+                        <option
+                          key={service.title}
+                          value={service.title}
+                        >
+                          {service.title}
+                        </option>
+                      ))}
                     </select>
-
                   </div>
 
                   <div>
-
                     <label
                       htmlFor="message"
                       className="mb-2 block text-sm font-semibold text-slate-300"
@@ -1410,12 +1380,10 @@ ${message}`;
                     <textarea
                       id="message"
                       name="message"
-                      rows={5}
-                      placeholder="Tell us about your requirement..."
+                      placeholder="Tell us about your transportation requirement..."
                       required
-                      className="w-full resize-none rounded-2xl border border-white/10 bg-[#071b3a] px-5 py-4 text-white outline-none placeholder:text-slate-600 transition focus:border-yellow-400/60"
+                      className="min-h-[150px] w-full rounded-2xl border border-white/10 bg-[#071b3a] px-5 py-4 text-white outline-none placeholder:text-slate-600 transition focus:border-yellow-400/60"
                     />
-
                   </div>
 
                   <button
@@ -1424,29 +1392,16 @@ ${message}`;
                   >
                     Send Enquiry on WhatsApp
 
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      className="h-5 w-5"
-                    >
-                      <path d="M21 11.5a8.5 8.5 0 0 1-12.8 7.4L4 20l1.1-4.1A8.5 8.5 0 1 1 21 11.5z" />
-                      <path d="M8.5 9.5c.4 2 2 3.6 4 4" />
-                    </svg>
-
+                    <WhatsAppIcon />
                   </button>
 
                   <p className="text-center text-xs leading-5 text-slate-500">
                     Clicking the button will open WhatsApp with your enquiry
                     details automatically filled in.
                   </p>
-
                 </form>
-
               </div>
             </Reveal>
-
           </div>
         </div>
       </section>
@@ -1455,15 +1410,11 @@ ${message}`;
           FOOTER
       ========================= */}
       <footer className="border-t border-white/10 bg-[#041126]">
-
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
-
           <Reveal>
             <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-
               {/* BRAND */}
               <div>
-
                 <a
                   href="#home"
                   className="inline-flex"
@@ -1476,21 +1427,16 @@ ${message}`;
                 </a>
 
                 <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
-                  Reliable mobility. Professional service.
-                  Transportation solutions designed around people
-                  and possibilities.
+                  Reliable mobility. Professional service. Transportation
+                  solutions designed around people and possibilities.
                 </p>
 
-                {/* SOCIAL MEDIA */}
                 <div className="mt-7">
-
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400">
                     Connect With Us
                   </p>
 
                   <div className="mt-4 flex items-center gap-3">
-
-                    {/* LINKEDIN */}
                     <a
                       href="https://www.linkedin.com/company/stramesmobility/"
                       target="_blank"
@@ -1501,7 +1447,6 @@ ${message}`;
                       <LinkedInIcon />
                     </a>
 
-                    {/* INSTAGRAM */}
                     <a
                       href="https://www.instagram.com/stramesmobility/"
                       target="_blank"
@@ -1512,7 +1457,6 @@ ${message}`;
                       <InstagramIcon />
                     </a>
 
-                    {/* FACEBOOK */}
                     <a
                       href="https://www.facebook.com/share/19P5vXkxao/?mibextid=wwXIfr"
                       target="_blank"
@@ -1522,21 +1466,17 @@ ${message}`;
                     >
                       <FacebookIcon />
                     </a>
-
                   </div>
                 </div>
-
               </div>
 
               {/* QUICK LINKS */}
               <div>
-
                 <h3 className="text-sm font-bold uppercase tracking-widest text-yellow-400">
                   Quick Links
                 </h3>
 
                 <div className="mt-5 flex flex-col gap-3">
-
                   <a
                     href="#home"
                     className="text-sm text-slate-400 transition hover:text-white"
@@ -1592,14 +1532,11 @@ ${message}`;
                   >
                     Contact
                   </a>
-
                 </div>
-
               </div>
 
-              {/* LEGAL & TRUST */}
+              {/* LEGAL */}
               <div>
-
                 <h3 className="text-sm font-bold uppercase tracking-widest text-yellow-400">
                   Trust & Legal
                 </h3>
@@ -1620,24 +1557,20 @@ ${message}`;
                   </a>
 
                   <p className="pt-2 text-xs leading-6 text-slate-500">
-                    Professional mobility solutions with a people-first approach.
+                    Professional mobility solutions with a people-first
+                    approach.
                   </p>
                 </div>
-
               </div>
 
               {/* CONTACT */}
               <div>
-
                 <h3 className="text-sm font-bold uppercase tracking-widest text-yellow-400">
                   Contact
                 </h3>
 
                 <div className="mt-5 space-y-3 text-sm text-slate-400">
-
-                  <p>
-                    Strames Mobility LLP
-                  </p>
+                  <p>Strames Mobility LLP</p>
 
                   <p>
                     Professional Mobility & Transportation Solutions
@@ -1651,9 +1584,7 @@ ${message}`;
                   </a>
 
                   <a
-                    href="https://wa.me/918551053573"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="tel:+918551053573"
                     className="block transition hover:text-white"
                   >
                     +91 85510 53573
@@ -1663,51 +1594,51 @@ ${message}`;
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-yellow-400">
                       Business Information
                     </p>
+
                     <p className="mt-2 text-xs leading-6 text-slate-500">
                       Legal entity: Strames Mobility LLP
                       <br />
                       Website: stramesmobility.com
                     </p>
                   </div>
-
                 </div>
-
               </div>
-
             </div>
           </Reveal>
 
           <div className="mt-12 border-t border-white/10 pt-6">
-
             <p className="text-center text-sm text-slate-500">
-              © {new Date().getFullYear()} Strames Mobility LLP. All rights reserved.
+              © {new Date().getFullYear()} Strames Mobility LLP. All rights
+              reserved.
             </p>
-
           </div>
-
         </div>
-
       </footer>
 
       {/* =========================
-          FLOATING WHATSAPP
+          FLOATING CALL + WHATSAPP
       ========================= */}
-      <a
-        href="https://wa.me/918551053573"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with Strames Mobility LLP on WhatsApp"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(37,211,102,0.35)] sm:bottom-8 sm:right-8"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="h-7 w-7"
+      <div className="floating-contact-actions fixed bottom-6 right-6 z-50 flex flex-col gap-3 sm:bottom-8 sm:right-8">
+        {/* CALL */}
+        <a
+          href="tel:+918551053573"
+          aria-label="Call Strames Mobility LLP"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-[#071b3a] shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(250,204,21,0.35)]"
         >
-          <path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.5 0 .17 5.33.17 11.88c0 2.1.55 4.15 1.6 5.96L.07 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.17-3.42-8.43ZM12.06 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.84 9.84 0 0 1-1.51-5.27c0-5.45 4.43-9.88 9.89-9.88a9.83 9.83 0 0 1 7 2.9 9.86 9.86 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
-        </svg>
-      </a>
+          <PhoneIcon />
+        </a>
 
+        {/* WHATSAPP */}
+        <a
+          href="https://wa.me/918551053573"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with Strames Mobility LLP on WhatsApp"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(37,211,102,0.35)]"
+        >
+          <WhatsAppIcon />
+        </a>
+      </div>
     </main>
   );
 }
