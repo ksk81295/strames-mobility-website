@@ -26,35 +26,19 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================
-   LINKS
-========================= */
-
 a {
   text-decoration: none;
 }
-
-/* =========================
-   BUTTON / LINK TAP EFFECT
-========================= */
 
 button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* =========================
-   TEXT SELECTION
-========================= */
-
 ::selection {
   background: var(--brand-yellow);
   color: var(--brand-navy);
 }
-
-/* =========================
-   FOCUS ACCESSIBILITY
-========================= */
 
 button:focus-visible,
 a:focus-visible,
@@ -65,10 +49,6 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* =========================
-   FORM ELEMENTS
-========================= */
-
 input,
 textarea,
 select {
@@ -78,10 +58,6 @@ select {
 textarea {
   min-height: 120px;
 }
-
-/* =========================
-   SCROLLBAR
-========================= */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -100,10 +76,6 @@ textarea {
   background: var(--brand-yellow);
 }
 
-/* =========================
-   SCROLL REVEAL
-========================= */
-
 @keyframes revealUp {
   from {
     opacity: 0;
@@ -120,10 +92,6 @@ textarea {
   animation: revealUp 0.8s ease-out both;
 }
 
-/* =========================
-   PREMIUM CARD
-========================= */
-
 .premium-card {
   transition:
     transform 0.35s ease,
@@ -136,10 +104,6 @@ textarea {
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
 
-/* =========================
-   MOBILE OPTIMISATION
-========================= */
-
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 80px;
@@ -150,26 +114,18 @@ textarea {
     overflow-x: hidden;
   }
 
-  /* Better mobile section spacing */
-
   section {
     scroll-margin-top: 80px;
   }
-
-  /* Prevent very large headings from feeling cramped */
 
   h1 {
     word-break: normal;
   }
 
-  /* Better touch targets */
-
   button,
   a {
     touch-action: manipulation;
   }
-
-  /* Mobile form controls */
 
   input,
   textarea,
@@ -178,16 +134,10 @@ textarea {
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 480px) {
   html {
     scroll-padding-top: 76px;
   }
-
-  /* Hero */
 
   #home .max-w-7xl {
     padding-top: 5rem;
@@ -195,7 +145,7 @@ textarea {
   }
 
   #home h1 {
-    font-size: 3.1rem;
+    font-size: 2.9rem;
     line-height: 0.98;
     letter-spacing: -0.045em;
   }
@@ -204,40 +154,28 @@ textarea {
     max-width: 100%;
   }
 
-  /* Hero buttons */
-
   #home .flex-wrap a {
     width: 100%;
     justify-content: center;
     text-align: center;
   }
 
-  /* Hero trust points */
-
   #home .grid {
     gap: 1.25rem;
   }
-
-  /* Section headings */
 
   section h2 {
     line-height: 1.08;
     letter-spacing: -0.025em;
   }
 
-  /* Fleet image area */
-
   #fleet .relative.flex {
     height: 220px;
   }
 
-  /* Fleet vehicle image */
-
   #fleet img {
     padding: 0.5rem;
   }
-
-  /* Contact form */
 
   #contact input,
   #contact textarea,
@@ -245,34 +183,28 @@ textarea {
     border-radius: 1rem;
   }
 
-  /* Floating WhatsApp */
-
-  .fixed.bottom-6.right-6 {
+  .floating-contact-actions {
     right: 1rem;
     bottom: 1rem;
+  }
+
+  .floating-contact-actions > a {
+    right: auto;
     width: 3.25rem;
     height: 3.25rem;
   }
 
-  .fixed.bottom-6.right-6 svg {
+  .floating-contact-actions svg {
     width: 1.5rem;
     height: 1.5rem;
   }
 }
-
-/* =========================
-   TABLET
-========================= */
 
 @media (min-width: 769px) and (max-width: 1100px) {
   #home h1 {
     font-size: 5.5rem;
   }
 }
-
-/* =========================
-   REDUCED MOTION
-========================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
