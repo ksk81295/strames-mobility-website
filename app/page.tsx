@@ -80,7 +80,7 @@ const leadership = [
     number: "03",
     name: "Kunal Kamble",
     role: "Business Development & Marketing",
-    phone: "85510 53573 / 86630 81295",
+    phone: "85510 53573 / 86830 81295",
     description:
       "Focused on business development, marketing and building strong relationships around Strames Mobility's growing mobility solutions.",
   },
